@@ -1,16 +1,8 @@
 {
-  "version": 2,
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/api/index.py"
+      "destination": "/api/index"
     }
-  ],
-  "functions": {
-    "api/index.py": {
-      "runtime": "python3.9",
-      "memory": 1024,
-      "maxDuration": 10
-    }
-  }
+  ]
 }
