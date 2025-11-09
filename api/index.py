@@ -550,5 +550,6 @@ def method_not_allowed(error):
 
 
 # ============= RUN SERVER =============
-def handler(event, context):
-        return app(event, context)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
