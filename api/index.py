@@ -549,8 +549,11 @@ def method_not_allowed(error):
     }), 405
 
 
-# ============= RUN SERVER =============
+# ============= RUN SERVER FOR LOCAL ONLY =============
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
 
-def handler(request, *args, **kwargs):
-    return app(request, *args, **kwargs)
+# ============= VERCEL SERVERLESS ENTRYPOINT =============
+# Expose the Flask WSGI app (required by Vercel)
+app = app
 
