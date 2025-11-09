@@ -550,53 +550,5 @@ def method_not_allowed(error):
 
 
 # ============= RUN SERVER =============
-
-if __name__ == '__main__':
-    print("\n" + "="*70)
-    print("🚀 AI NEWS HUB - BACKEND SERVER")
-    print("="*70)
-    
-    print("\n📋 Configuration Status:")
-    print("-" * 70)
-    
-    if NEWS_API_KEY:
-        print("✓ News API: Configured (Real data enabled)")
-    else:
-        print("⚠️  News API: Not configured")
-        print("   Using demo data. Get your free API key at: https://newsapi.org")
-    
-    if GEMINI_API_KEY and gemini_model:
-        print("✓ Gemini AI: Configured (AI summaries enabled)")
-    else:
-        print("⚠️  Gemini AI: Not configured")
-        print("   AI features disabled. Get API key at: https://makersuite.google.com/app/apikey")
-    
-    print("-" * 70)
-    print("\n🌐 Server Information:")
-    print(f"   Local:    http://localhost:5000")
-    print(f"   Network:  http://0.0.0.0:5000")
-    print("\n📝 Available Endpoints:")
-    print("   GET  /                     - Serve HTML interface")
-    print("   GET  /api/health           - Health check")
-    print("   GET  /api/trending         - Get trending news")
-    print("   POST /api/search           - Search news")
-    print("   POST /api/summarize        - Summarize text")
-    print("   POST /api/extract-url      - Extract & summarize URL")
-    
-    print("\n💡 Quick Start:")
-    print("   1. Open your browser")
-    print("   2. Go to http://localhost:5000")
-    print("   3. Start exploring news!")
-    
-    print("\n" + "="*70)
-    print("Press Ctrl+C to stop the server")
-    print("="*70 + "\n")
-    
-    # Run the Flask app
-    app.run(
-        host='0.0.0.0',
-        port=5000,
-        debug=True,
-        threaded=True
-    )
-    app=app
+def handler(event, context):
+        return app(event, context)
