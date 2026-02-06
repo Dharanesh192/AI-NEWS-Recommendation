@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI News Hub - Crypto Style</title>
+    <link rel="stylesheet" href="Stylish_NEWS.css">
+</head>
+<body>
+    <div class="bg-elements">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+        <!-- Particles will be added by JavaScript -->
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="logo-icon">🚀</span>
+                <span>AI News Hub</span>
+            </div>
+            <nav>
+                <a href="#trending">Trending</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About</a>
+            </nav>
+            <div class="sparkle">✨</div>
+        </header>
+
+        <section class="hero">
+            <h1>
+                Discover <span class="gradient-text">AI-Powered</span><br>
+                News Intelligence
+            </h1>
+            <p>Stay ahead with cutting-edge news aggregation powered by advanced AI technology. Get personalized summaries in seconds.</p>
+        </section>
+
+        <section class="search-section">
+            <div class="search-tabs">
+                <div class="search-tab active" onclick="switchSearchTab('trending')">🔥 Trending</div>
+                <div class="search-tab" onclick="switchSearchTab('search')">🔍 Search</div>
+                <div class="search-tab" onclick="switchSearchTab('url')">🔗 URL Summary</div>
+            </div>
+            <div class="search-box">
+                <input type="text" id="mainSearchInput" placeholder="Search for news, topics, or paste URL...">
+                <button onclick="performSearch()">Search</button>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="stat-card">
+                <div class="stat-number" id="articleCount">0</div>
+                <div class="stat-label">Articles Loaded</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">7</div>
+                <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">AI</div>
+                <div class="stat-label">Powered</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Live Updates</div>
+            </div>
+        </section>
+
+        <section class="categories-section" id="categories">
+            <div class="section-header">
+                <span class="section-icon">🎯</span>
+                <h2>Explore <span class="gradient-text">Categories</span></h2>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card active" onclick="selectCategory('general')">
+                    <div class="category-icon">🌍</div>
+                    <div class="category-name">General</div>
+                </div>
+                <div class="category-card" onclick="selectCategory('technology')">
+                    <div class="category-icon">🤖</div>
+                    <div class="category-name">AI & Tech</div>
+                </div>
+                <div class="category-card" onclick="selectCategory('business')">
+                    <div class="category-icon">💼</div>
+                    <div class="category-name">Business</div>
+                </div>
+                <div class="category-card" onclick="selectCategory('science')">
+                    <div class="category-icon">🔬</div>
+                    <div class="category-name">Science</div>
+                </div>
+                <div class="category-card" onclick="selectCategory('health')">
+                    <div class="category-icon">💊</div>
+                    <div class="category-name">Health</div>
+                </div>
+                <div class="category-card" onclick="selectCategory('sports')">
+                    <div class="category-icon">⚽</div>
+                    <div class="category-name">Sports</div>
+                </div>
+                <div class="category-card" onclick="selectCategory('entertainment')">
+                    <div class="category-icon">🎬</div>
+                    <div class="category-name">Entertainment</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-section">
+            <div class="section-header">
+                <span class="section-icon">📰</span>
+                <h2>Trending <span class="gradient-text">News</span></h2>
+            </div>
+            <div id="loadingIndicator" class="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Loading amazing content...</p>
+            </div>
+            <div id="newsGrid" class="news-grid"></div>
+        </section>
+    </div>
+
+    <div id="summaryModal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <span class="modal-badge">✨ AI SUMMARY</span>
+                <button class="close-btn" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-title" id="modalTitle"></div>
+            <div class="modal-text" id="modalText"></div>
+        </div>
+    </div>
+
+    <script src="Live_action.js"></script>
+</body>
+</html>
