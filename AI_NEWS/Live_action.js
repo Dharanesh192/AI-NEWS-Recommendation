@@ -336,3 +336,17 @@ const API_BASE = 'http://localhost:5000/api';
         document.getElementById('mainSearchInput').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') performSearch();
         });
+
+        document.addEventListener("DOMContentLoaded", () => {
+        loadTrendingNews();
+        });
+
+        function loadTrendingNews() {
+        fetch("/api/trending?category=general")
+            .then(res => res.json())
+            .then(data => {
+            console.log("Trending News:", data);
+            // TODO: render news cards here
+            })
+            .catch(err => console.error("API error:", err));
+        }
