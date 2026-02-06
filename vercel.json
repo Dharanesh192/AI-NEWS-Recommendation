@@ -5,7 +5,13 @@
     { "src": "AI_NEWS/**", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "api/Backend.py" },
-    { "src": "/(.*)", "dest": "/AI_NEWS/index.html" }
+    {
+      "src": "^/api(/.*)?$",
+      "dest": "api/Backend.py"
+    },
+    {
+      "src": "^(?!/api).*$",
+      "dest": "/AI_NEWS/index.html"
+    }
   ]
 }
