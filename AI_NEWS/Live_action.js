@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = "";
         let currentCategory = 'general';
         let currentSearchMode = 'trending';
 
@@ -47,7 +47,7 @@ const API_BASE = 'http://localhost:5000/api';
                 }
             } catch (error) {
                 console.error('❌ Backend connection failed:', error);
-                console.error('Make sure the Python backend is running on http://localhost:5000');
+                console.error('Make sure the Python backend is running');
                 alert('⚠️  Cannot connect to backend server.\n\nPlease make sure:\n1. Python backend is running (python app.py)\n2. Server is on http://localhost:5000');
             }
         }
