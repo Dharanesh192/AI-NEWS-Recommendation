@@ -76,17 +76,17 @@
 
         @keyframes particleFloat {
             0% {
-                transform: translateY(100vh) translateX(0) scale(0);
+                transform: translateY(0);
                 opacity: 0;
             }
-            10% {
+            15% {
                 opacity: 0.6;
             }
-            90% {
+            85% {
                 opacity: 0.6;
             }
             100% {
-                transform: translateY(-100px) translateX(100px) scale(1);
+                transform: translateY(-130vh);
                 opacity: 0;
             }
         }
