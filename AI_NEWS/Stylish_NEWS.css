@@ -65,7 +65,7 @@
             background: #d4af37;
             border-radius: 50%;
             opacity: 0.6;
-            animation: particleFloat 15s infinite;
+            animation: particleFloat linear infinite;
         }
 
         @keyframes float {
@@ -128,6 +128,7 @@
         nav {
             display: flex;
             gap: 30px;
+            padding-right: 40%;
         }
 
         nav a {

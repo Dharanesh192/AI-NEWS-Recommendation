@@ -19,7 +19,7 @@ const API_BASE = "/api";
                 
                 // Random positioning
                 particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.top = (100 + Math.random() * 30) + 'vh';
                 particle.style.animationDuration = (15 + Math.random() * 10) + 's';
                 
                 // Random size variation
