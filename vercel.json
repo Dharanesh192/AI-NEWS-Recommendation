@@ -10,7 +10,11 @@
       "dest": "api/Backend.py"
     },
     {
-      "src": "^(?!/api).*$",
+      "src": "^/AI_NEWS/(.*)",
+      "dest": "/AI_NEWS/$1"
+    },
+    {
+      "src": "^(?!/api|/AI_NEWS/).*",
       "dest": "/AI_NEWS/index.html"
     }
   ]
