@@ -28,9 +28,7 @@ const API_BASE = "/api";
                 particle.style.height = size + 'px';
                 
                 bgElements.appendChild(particle);
-            }
-            
-            console.log('✨ Created ' + particleCount + ' floating particles');
+            }            
         }
 
         async function checkBackendConnection() {

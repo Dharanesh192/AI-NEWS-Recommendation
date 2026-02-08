@@ -60,11 +60,10 @@
         /* Floating particles */
         .particle {
             position: absolute;
-            width: 4px;
-            height: 4px;
+            will-change: transform, opacity;
             background: #d4af37;
             border-radius: 50%;
-            opacity: 0.6;
+            opacity: 0;
             animation: particleFloat linear infinite;
         }
 
