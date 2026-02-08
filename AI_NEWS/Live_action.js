@@ -1,4 +1,4 @@
-const API_BASE = "";
+const API_BASE = "/api";
         let currentCategory = 'general';
         let currentSearchMode = 'trending';
 
@@ -47,8 +47,7 @@ const API_BASE = "";
                 }
             } catch (error) {
                 console.error('❌ Backend connection failed:', error);
-                alert('⚠️  Cannot connect to backend server.\n\nPlease make sure:\n1. Python backend is running (python app.py)');
-            }
+                alert('⚠️ Backend connection failed. Please try again later.');            }
         }
 
         function switchSearchTab(mode) {
@@ -335,17 +334,3 @@ const API_BASE = "";
         document.getElementById('mainSearchInput').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') performSearch();
         });
-
-        document.addEventListener("DOMContentLoaded", () => {
-        loadTrendingNews();
-        });
-
-        function loadTrendingNews() {
-        fetch("/api/trending?category=general")
-            .then(res => res.json())
-            .then(data => {
-            console.log("Trending News:", data);
-            // TODO: render news cards here
-            })
-            .catch(err => console.error("API error:", err));
-        }
