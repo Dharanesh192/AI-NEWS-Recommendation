@@ -81,68 +81,6 @@ if GEMINI_API_KEY:
     except Exception as e:
         print(f"⚠️  Gemini AI initialization failed: {e}")
 
-# Demo articles for when API key is not available
-def get_demo_articles():
-    """Generate demo articles with current timestamps"""
-    from datetime import datetime, timedelta
-    import random
-    
-    now = datetime.utcnow()
-    
-    demo_data = [
-        {
-            'source': {'name': 'Tech Daily'},
-            'title': 'Revolutionary AI System Achieves Human-Level Reasoning',
-            'description': 'Scientists announce breakthrough in artificial intelligence that enables machines to solve complex problems with human-like reasoning capabilities.',
-            'url': 'https://example.com/ai-breakthrough',
-            'publishedAt': (now - timedelta(hours=random.randint(1, 5))).isoformat() + 'Z',
-            'urlToImage': None
-        },
-        {
-            'source': {'name': 'Global News Network'},
-            'title': 'Sustainable Energy Solutions Transform Power Generation',
-            'description': 'New renewable energy technology promises to revolutionize how we generate and store electricity, making clean energy more accessible.',
-            'url': 'https://example.com/energy-solutions',
-            'publishedAt': (now - timedelta(hours=random.randint(6, 12))).isoformat() + 'Z',
-            'urlToImage': None
-        },
-        {
-            'source': {'name': 'Innovation Weekly'},
-            'title': 'Quantum Computing Reaches Commercial Milestone',
-            'description': 'Major tech companies announce quantum computers are now available for enterprise applications, marking a new era in computing.',
-            'url': 'https://example.com/quantum-computing',
-            'publishedAt': (now - timedelta(hours=random.randint(13, 24))).isoformat() + 'Z',
-            'urlToImage': None
-        },
-        {
-            'source': {'name': 'Health Monitor'},
-            'title': 'Medical AI Improves Early Disease Detection',
-            'description': 'New artificial intelligence tools help doctors identify diseases earlier and with greater accuracy, improving patient outcomes.',
-            'url': 'https://example.com/medical-ai',
-            'publishedAt': (now - timedelta(hours=random.randint(25, 36))).isoformat() + 'Z',
-            'urlToImage': None
-        },
-        {
-            'source': {'name': 'Space Gazette'},
-            'title': 'Mars Colony Project Enters New Phase',
-            'description': 'International space agencies collaborate on ambitious plan to establish permanent human settlement on Mars by 2030.',
-            'url': 'https://example.com/mars-colony',
-            'publishedAt': (now - timedelta(hours=random.randint(37, 48))).isoformat() + 'Z',
-            'urlToImage': None
-        },
-        {
-            'source': {'name': 'Business Insider'},
-            'title': 'Digital Currency Adoption Accelerates Globally',
-            'description': 'Central banks worldwide move forward with digital currency initiatives as adoption rates surge across major economies.',
-            'url': 'https://example.com/digital-currency',
-            'publishedAt': (now - timedelta(hours=random.randint(49, 72))).isoformat() + 'Z',
-            'urlToImage': None
-        }
-    ]
-    
-    return demo_data
-
-
 # ============= SERVE HTML =============
 
 @app.route('/')
@@ -598,4 +536,5 @@ if __name__ == '__main__':
         port=5000,
         debug=True,
         threaded=True
+
     )
