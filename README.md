@@ -52,7 +52,7 @@ This project is ideal for students who want to understand:
 
 ## 🛠️ Features
 
-- 📰 Upload news by API 
+- 📰 Fetch real-time news dynamically using News API
 - 🤖 AI Summarization concept by **Gemini** 
 - 🔎 Category-based filtering
 - ⚡ Fast news uploading
@@ -66,7 +66,7 @@ This project is ideal for students who want to understand:
 ## 📜 Requirements
 
 - Install **Python 3.10+**
-- If you want you can create a **vene** to install the required python libraries
+- If you want you can create a **venv (virtual environment)** to install the required python libraries
   ```
   python -m venv venv
 - To activate the .venv use
@@ -129,9 +129,27 @@ This project is ideal for students who want to understand:
   ```
   NEWS_API_KEY = os.getenv('The variable that store your NEWS API key')
   GEMINI_API_KEY = os.getenv('The variable that store your Gemini API key')
-- **⚠️ Don't share your API keys with anyone**  
+- **⚠️ Don't share your API keys with anyone**
+
+## 🔐 Example .env File
+
+- NEWS_API_KEY=your_news_api_key_here
+- GEMINI_API_KEY=your_gemini_api_key_here
 
 ---
+
+## 🏗️ System Architecture
+
+    Frontend (HTML/CSS/JS)
+            ⇅
+    Backend (Python - Flask/FastAPI)
+            ⇅
+    External APIs
+       • News API
+       • Gemini API
+
+---
+
 
 ## 💡 How It Works
 
