@@ -1,6 +1,6 @@
 ## 📰 About AI News Recommendation System
 
-The AI News Recommendation System is an API-driven web application that collects data from external news website (`NEWS API` it give yesterday's news due to its free version) providers and enhances it using AI ( `Gemini`) summarization.
+The AI News Recommendation System is an API-driven web application that collects data from external news website (`NEWS API` it provides yesterday's news due to its free version) providers and enhances it using ( `Gemini AI`) summarization.
 
 This project demonstrates how modern applications:
 - Fetch live data using APIs
@@ -109,8 +109,8 @@ This project is ideal for students who want to understand:
 - Think of it like a digital bridge between your website to other web service
 - It is done by a **unique string of characters used to identify and authenticate**
 - The API key is included in the request (usually in the header or URL) and the server verifies the key
--If valid, the server allows access to the requested data or service.
--If invalid or missing, the request is rejected.
+- If valid, the server allows access to the requested data or service.
+- If invalid or missing, the request is rejected.
 
 ## 🧐 Where To Get The NEWS API Keys ?
 - Go to **https://newsapi.org/register** register your details to get a NEWS API Keys and cpoy that API key
