@@ -63,6 +63,17 @@ This project is ideal for students who want to understand:
 
 ---
 
+## ▶️ How Run The Code 
+- `Download/Copy` all the files from the folder AI_NEWS and api
+- Create an `venv` and install all the python libraries from the `requirement.txt` file
+- Check the file structure and `all the instructions detailedly given below`
+- Active the `venv` and run the python file and then run the frontend
+- You may want to `rewrite the code to work in your localhost`
+- I alter this code for the deployment purpose
+- Here is the deployment link of this project --> https://ai-news-11-report.vercel.app/
+
+---
+
 ## 📜 Requirements
 
 - Install **Python 3.10+**
@@ -182,4 +193,3 @@ This project is ideal for students who want to understand:
 - Source link
 
 7️⃣ All API keys are securely stored inside a `.env` file to prevent exposure.
-
