@@ -63,37 +63,6 @@ This project is ideal for students who want to understand:
 
 ---
 
-## ▶️ How to Run
-
-### Option 1 (Windows - Recommended)
-1. Clone this repository.
-2. Open the project folder.
-3. Double-click `run.bat`.
-4. Wait for the backend terminal to start; your browser will open:
-   - `http://localhost:5000/NEWS.html`
-
-### Option 2 (Manual - Any OS)
-1. Create and activate a virtual environment.
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Start backend:
-   ```bash
-   cd api
-   python Backend.py
-   ```
-4. Open this URL in your browser:
-   - `http://localhost:5000/NEWS.html`
-
-### Optional API configuration
-- Add your keys in a `.env` file (project root or `api/`):
-  - `NEWS_API_KEY=your_news_api_key`
-  - `GEMINI_API_KEY=your_gemini_api_key`
-- Without keys, the app still runs with demo/fallback behavior.
-
----
-
 ## 📜 Requirements
 
 - Install **Python 3.10+**
@@ -168,6 +137,36 @@ This project is ideal for students who want to understand:
 - GEMINI_API_KEY=your_gemini_api_key_here
 
 ---
+
+## ▶️ How to Run
+
+### Option 1 (Windows - Recommended)
+1. Clone this repository.
+2. Open the project folder.
+3. Double-click `run.bat`.
+4. Wait for the backend terminal to start; your browser will open:
+   - `http://localhost:5000/NEWS.html`
+
+### Option 2 (Manual - Any OS)
+1. Create and activate a virtual environment.
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Start backend:
+   ```bash
+   cd api
+   python Backend.py
+   ```
+4. Open this URL in your browser:
+   - `http://localhost:5000/NEWS.html`
+
+5. Add your keys in a `.env` file (project root or `api/`):
+  - `NEWS_API_KEY=your_news_api_key`
+  - `GEMINI_API_KEY=your_gemini_api_key`
+- Without keys, the app still runs with demo/fallback behavior.
+
+---   
 
 ## 🏗️ System Architecture
 
