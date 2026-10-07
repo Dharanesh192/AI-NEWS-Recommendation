@@ -143,8 +143,9 @@ This project is ideal for students who want to understand:
 ### Option 1 (Windows - Recommended)
 1. Clone this repository.
 2. Open the project folder.
-3. Double-click `run.bat`.
-4. Wait for the backend terminal to start; your browser will open:
+3. Create a `.env` file to store the `API keys` in the `api folder`.
+4. Double-click `run.bat`.
+5. Wait for the backend terminal to start; your browser will open:
    - `http://localhost:5000/NEWS.html`
 
 ### Option 2 (Manual - Any OS)
