@@ -81,59 +81,39 @@ echo ==========================================
 echo.
 
 REM ------------------------------------------------
+REM Prepare frontend files for local backend serving
+REM ------------------------------------------------
+
+if not exist "api\Backend.py" (
+    echo ERROR: api\Backend.py was not found.
+    pause
+    exit /b 1
+)
+
+if not exist "AI_NEWS\index.html" (
+    echo ERROR: AI_NEWS\index.html was not found.
+    pause
+    exit /b 1
+)
+
+echo Preparing frontend files...
+copy /y "AI_NEWS\index.html" "api\NEWS.html" >nul
+copy /y "AI_NEWS\Live_action.js" "api\Live_action.js" >nul
+copy /y "AI_NEWS\Stylish_NEWS.css" "api\Stylish_NEWS.css" >nul
+
+REM ------------------------------------------------
 REM Start Flask/Python backend
 REM ------------------------------------------------
 
-if exist "AI_NEWS\app.py" (
-    start "AI News Backend" cmd /k "cd /d "%~dp0AI_NEWS" && "%~dp0venv\Scripts\python.exe" app.py"
-) else if exist "app.py" (
-    start "AI News Backend" cmd /k ""%~dp0venv\Scripts\python.exe" app.py"
-) else (
-    echo ERROR: app.py was not found.
-    pause
-    exit /b 1
-)
+start "AI News Backend" cmd /k "cd /d ""%~dp0api"" && ""%~dp0venv\Scripts\python.exe"" Backend.py"
 
 REM ------------------------------------------------
-REM Wait for backend to start
+REM Wait for backend to start and open app
 REM ------------------------------------------------
 
 echo Waiting for backend to start...
-timeout /t 3 /nobreak >nul
-
-REM ------------------------------------------------
-REM Start frontend HTTP server
-REM ------------------------------------------------
-
-echo.
-echo ==========================================
-echo Starting frontend...
-echo ==========================================
-echo.
-
-if exist "AI_NEWS\NEWS.html" (
-
-    start "AI News Frontend" cmd /k "cd /d "%~dp0AI_NEWS" && "%~dp0venv\Scripts\python.exe" -m http.server 5500"
-
-    timeout /t 2 /nobreak >nul
-
-    start "" "http://localhost:5500/NEWS.html"
-
-) else if exist "NEWS.html" (
-
-    start "AI News Frontend" cmd /k "cd /d "%~dp0" && "%~dp0venv\Scripts\python.exe" -m http.server 5500"
-
-    timeout /t 2 /nobreak >nul
-
-    start "" "http://localhost:5500/NEWS.html"
-
-) else (
-
-    echo ERROR: NEWS.html was not found.
-    pause
-    exit /b 1
-
-)
+timeout /t 4 /nobreak >nul
+start "" "http://localhost:5000/NEWS.html"
 
 echo.
 echo ==========================================
@@ -141,12 +121,12 @@ echo AI NEWS APPLICATION STARTED
 echo ==========================================
 echo.
 echo Frontend:
-echo http://localhost:5500/NEWS.html
+echo http://localhost:5000/NEWS.html
 echo.
 echo Backend:
-echo Running in a separate terminal.
+echo Running in a separate terminal on http://localhost:5000
 echo.
-echo Do not close the backend or frontend terminals.
+echo Do not close the backend terminal.
 echo.
 
 pause
